@@ -32,7 +32,7 @@ function Form() {
     my property
     */
     <section className="w-screen h-screen overflow-x-hidden">
-      {!!dataSent ? (
+      {!dataSent ? (
         <div className="grid grid-cols-2 ites-center p-6 mt-10">
           <div className="col-span-1">
             <h1 className="p-10 pl-12 text-2xl font-bold font-varaiable mx-auto">
