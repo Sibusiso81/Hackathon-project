@@ -10,9 +10,8 @@ function Dashboard() {
   const [view, setView] = useState("");
   const nevigate = useNavigate();
 
-  
   return (
-    <section className="w-screen h-screen">
+    <section className="w-screen h-screen overflow-x-hidden">
       <div className="flex flex-row justify-between font-poppins p-1">
         <div className="flex flex-row items-center ">
           <div className="bg-cover">

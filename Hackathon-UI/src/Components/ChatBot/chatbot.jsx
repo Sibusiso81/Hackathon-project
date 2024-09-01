@@ -22,16 +22,14 @@ function Chatbot() {
   const generateResponse = async (msg) => {
     if (!msg) return;
 
-    const genAI = new GoogleGenerativeAI(
-      "AIzaSyCuteg6uFuyulKhvIl4kw7e6Py4T5uZDBw"
-    ); // Replace with your API key
+    const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY); // Replace with your API key
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const result = await model.generateContent(msg);
 
     const newMessages = [
       ...messages,
-      { type: "userMsg", text: msg },
-      { type: "responseMsg", text: result.response.text() },
+      { type: "You", text: msg },
+      { type: "Assistant", text: result.response.text() },
     ];
 
     setMessages(newMessages);
@@ -63,7 +61,12 @@ function Chatbot() {
 
             <div className="messages mx-auto">
               {messages?.map((msg, index) => (
-                <div key={index} className=" mx-auto prose prose-invert">
+                <div
+                  key={index}
+                  className=" p-2 h-fit rounded-md mx-auto prose prose-invert mt-2"
+                >
+                  <p className="text-white">{msg.type}</p>
+                  {msg ? console.log(msg.role, { msg }) : null}
                   <ReactMarkdown>{msg.text}</ReactMarkdown>
                 </div>
               ))}
