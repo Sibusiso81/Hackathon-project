@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        varaiable: ["Inter-variable", "sans-serif"],
       },
     },
   },

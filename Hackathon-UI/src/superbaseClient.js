@@ -1,9 +1,9 @@
 import { createClient } from "@supabase/supabase-js";
-const superbasekey = import.meta.env.VITE_SUPERBASE_KEY;
-const superbaseUrl = import.meta.env.VITE_SUPERBASE_URL;
-export const superbase = createClient({
-  superbaseUrl,
-  superbasekey,
-});
 
-console.log(superbaseUrl);
+const supabaseKey = import.meta.env.VITE_SUPARBASE_KEY || "";
+const supabaseUrl = import.meta.env.VITE_SUPARBASE_URL || "";
+
+if (!supabaseKey) throw new error("invalid superbase key ");
+if (!supabaseUrl) throw new error("url not found");
+
+export const supabase = createClient(supabaseUrl, supabaseKey);
