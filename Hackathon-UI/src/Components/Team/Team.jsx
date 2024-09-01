@@ -11,7 +11,7 @@ function Team() {
     ahmed:https://media.licdn.com/dms/image/v2/D4D03AQEx46Xn8gu0mw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718283973713?e=2147483647&v=beta&t=2_End6vbEv4RQcjeyOkRmbRmrU5e7Ngf9-ZTpkl7zGo
     */
     <section
-      className="w-screen h-screen flex flex-col space-y-10 items-center"
+      className="w-screen h-screen flex flex-col space-y-10 items-center my-52"
       id="#Team"
     >
       <h1 className="text-center font-bold font-varaiable text-3xl h-32">
