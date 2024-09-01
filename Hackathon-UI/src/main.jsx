@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import LandingPage from "./LandingPage.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
+import Chatbot from "./Components/ChatBot/chatbot.jsx";
 /* import Dashboard from "./Components/Dashboard/Dashboard.jsx"; */
 
 const router = createBrowserRouter(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="" element={<LandingPage />}></Route>
       <Route path="dashboard" element={<Dashboard />}></Route>
       {/* Add Chatbot to routes */}
+      <Route path="chatbot" element={<Chatbot />}></Route>
     </Route>
   )
 );
